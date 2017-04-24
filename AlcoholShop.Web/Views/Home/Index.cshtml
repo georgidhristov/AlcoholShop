@@ -1,0 +1,26 @@
+﻿@using System.Web.Mvc.Html
+@model IEnumerable<AlcoholShop.Models.ViewModels.Product.ProductViewModel>
+@{
+    ViewBag.Title = "Alcohol Shop";
+}
+
+<h3 style="text-align: center;">Products</h3>
+
+@foreach (var vm in Model)
+{
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail" style="background-color: whitesmoke; margin-bottom: 5px;">
+            <div class="caption">
+                <h4>@Html.DisplayFor(vms => vm.Name)</h4>
+                <p>@Html.DisplayFor(vms => vm.Description)</p>   
+              
+            </div>
+
+            @Html.ActionLink("Buy", "Index", "Home", new { id = vm.Id }, new { @style = "font-size: 14px;", @class = "btn btn-lg btn-success" })
+            @Html.DisplayNameFor(productVm => productVm.Price)
+            @Html.DisplayFor(vms => vm.Price)
+            BGN 
+                
+        </div>
+    </div>
+}
