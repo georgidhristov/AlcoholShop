@@ -279,6 +279,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\Unauthorized.cshtml" />
+    <Content Include="Views\Customer\ShoppingCart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AlcoholShop.Data\AlcoholShop.Data.csproj">

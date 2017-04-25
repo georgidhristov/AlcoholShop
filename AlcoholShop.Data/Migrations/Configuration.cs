@@ -41,7 +41,7 @@ namespace AlcoholShop.Data.Migrations
                     Description = "Middle class whisky, 700ml",
                     Amount = 0,
                     Price = 35.50M,
-                    ImagePath = "~/Resources/jack-daniels.png"
+                    ImagePath = "~/Resources/jack-daniels.png",
                 },
                 new Product()
                 {
@@ -49,7 +49,7 @@ namespace AlcoholShop.Data.Migrations
                     Description = "Middle class whisky, 700ml",
                     Amount = 30,
                     Price = 20.00M,
-                    ImagePath = "~/Resources/red-label.png"
+                    ImagePath = "~/Resources/red-label.png",
                 },
                 new Product()
                 {
@@ -57,7 +57,7 @@ namespace AlcoholShop.Data.Migrations
                     Description = "Middle class whisky, 700ml",
                     Amount = 44,
                     Price = 27.00M,
-                    ImagePath = "~/Resources/paddy.png"
+                    ImagePath = "~/Resources/paddy.png",
                 },
                 new Product()
                 {
@@ -65,7 +65,7 @@ namespace AlcoholShop.Data.Migrations
                     Description = "Top shelf whisky, 700ml",
                     Amount = 3,
                     Price = 50.98M,
-                    ImagePath = "~/Resources/dimple.png"
+                    ImagePath = "~/Resources/dimple.png",
                 },
                 new Product()
                 {
@@ -73,7 +73,7 @@ namespace AlcoholShop.Data.Migrations
                     Description = "Low class whisky, 700ml",
                     Amount = 36,
                     Price = 11.99M,
-                    ImagePath = "~/Resources/vat69.png"
+                    ImagePath = "~/Resources/vat69.png",
                 },
                 new Product()
                 {
@@ -81,7 +81,7 @@ namespace AlcoholShop.Data.Migrations
                     Description = "Top shelf whisky, 700ml",
                     Amount = 36,
                     Price = 109.00M,
-                    ImagePath = "~/Resources/blue-label.png"
+                    ImagePath = "~/Resources/blue-label.png",
                 }
             });
         }

@@ -1,0 +1,29 @@
+﻿@model AlcoholShop.Models.ViewModels.Customer.ShoppingCartViewModel
+    
+@{
+    ViewBag.Title = "Profile Page";
+}
+
+<h2>Shopping Cart</h2>
+
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var product in Model.ProductsInCart)
+    {
+        <tr>
+            <td>@Html.DisplayFor(vm => product.Name)</td>
+            <td>@Html.DisplayFor(vm => product.Description)</td>
+            <td>@Html.DisplayFor(vm => product.Price) BGN</td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+@Html.ActionLink("Home", "Index", "Home")

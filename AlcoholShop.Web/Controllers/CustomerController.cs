@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using AlcoholShop.Models.EntityModels;
+using AlcoholShop.Models.ViewModels.Customer;
 using AlcoholShop.Services;
 
 namespace AlcoholShop.Web.Controllers
@@ -21,13 +22,15 @@ namespace AlcoholShop.Web.Controllers
             string userName = this.User.Identity.Name;
             Customer customer = this.service.GetCurrentCustomer(userName);
             this.service.AddProductInCart(productId, customer);
-            return RedirectToAction("Index");
+            return RedirectToAction("ShoppingCart");
         }
 
-        public ActionResult ShopingCart()
+        public ActionResult ShoppingCart()
         {
+            string userName = this.User.Identity.Name;
+            ShoppingCartViewModel vm = this.service.GetShoppingCardViewModel(userName);
 
-            return this.View();
+            return this.View(vm);
         }
     }
 }
