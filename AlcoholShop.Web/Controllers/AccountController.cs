@@ -152,7 +152,7 @@ namespace AlcoholShop.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Name = model.Name, BirthDate = model.BirthDate};
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Name = model.Name, BirthDate = model.BirthDate, Address = model.Address, PhoneNumber = model.PhoneNumber, Postcode = model.Postcode};
                 var result = await UserManager.CreateAsync(user, model.Password);
 
                 if (result.Succeeded)

@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace AlcoholShop.Models.ViewModels.Product
+﻿namespace AlcoholShop.Models.ViewModels.Product
 {
     public class ProductViewModel
     {
@@ -12,8 +10,8 @@ namespace AlcoholShop.Models.ViewModels.Product
 
         public int Amount { get; set; }
 
-        [Display(Name = "Price: ")]
         public decimal Price { get; set; }
        
+        public string ImagePath { get; set; }
     }
 }

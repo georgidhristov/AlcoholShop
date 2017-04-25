@@ -40,35 +40,48 @@ namespace AlcoholShop.Data.Migrations
                     Name = "Jack Daniel's",
                     Description = "Middle class whisky, 700ml",
                     Amount = 0,
-                    Price = 35.50M
+                    Price = 35.50M,
+                    ImagePath = "~/Resources/jack-daniels.png"
                 },
                 new Product()
                 {
                     Name = "Red Label",
                     Description = "Middle class whisky, 700ml",
                     Amount = 30,
-                    Price = 20.00M
+                    Price = 20.00M,
+                    ImagePath = "~/Resources/red-label.png"
                 },
                 new Product()
                 {
                     Name = "Paddy",
                     Description = "Middle class whisky, 700ml",
                     Amount = 44,
-                    Price = 27.00M
+                    Price = 27.00M,
+                    ImagePath = "~/Resources/paddy.png"
                 },
                 new Product()
                 {
                     Name = "Dimple",
                     Description = "Top shelf whisky, 700ml",
                     Amount = 3,
-                    Price = 50.98M
+                    Price = 50.98M,
+                    ImagePath = "~/Resources/dimple.png"
                 },
                 new Product()
                 {
                     Name = "Vat69",
                     Description = "Low class whisky, 700ml",
                     Amount = 36,
-                    Price = 11.99M
+                    Price = 11.99M,
+                    ImagePath = "~/Resources/vat69.png"
+                },
+                new Product()
+                {
+                    Name = "Blue Label",
+                    Description = "Top shelf whisky, 700ml",
+                    Amount = 36,
+                    Price = 109.00M,
+                    ImagePath = "~/Resources/blue-label.png"
                 }
             });
         }

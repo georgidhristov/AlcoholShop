@@ -7,8 +7,10 @@ namespace AlcoholShop.Services
         public void CreateCustomer(ApplicationUser user)
         {
             Customer customer = new Customer();
-            customer.User = user;
+            ApplicationUser au = this.Context.Users.Find(user.Id);
+            customer.User = au;
             this.Context.Customers.Add(customer);
+            this.Context.SaveChanges();
         }
     }
 }

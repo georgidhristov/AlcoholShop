@@ -10,7 +10,11 @@ namespace AlcoholShop.Models.EntityModels
     {
         public string Name { get; set; }
 
-        public DateTime? BirthDate { get; set; }
+        public DateTime BirthDate { get; set; }
+
+        public string Address { get; set; }
+
+        public string Postcode { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
