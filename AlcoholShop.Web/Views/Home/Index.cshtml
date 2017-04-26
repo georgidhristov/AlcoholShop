@@ -4,16 +4,35 @@
     ViewBag.Title = "Alcohol Shop";
 }
 
+<style>
+    .jumbotron {
+        margin-bottom: 20px;
+        background: url('/Resources/whisky-banner.png') no-repeat center center;
+        width: 100%;
+        height: 370px; /*same height as jumbotron */
+        z-index: -1;
+        color: whitesmoke;
+    }
+</style>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Online Alcohol Store<br /> Buy Liquor Online<br /> Buy Wine Online<br /> Buy Spirits</h1> 
+        <p>Shopping online fast delivery.</p> 
+    </div>
+</div>
+
+
 @foreach (var vm in Model)
 {
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail" style="background-color: whitesmoke; margin-bottom: 5px; align-items: center; text-align: center">
-            <div class="caption">          
-                <img style="max-height: 200px" src="@Url.Content(vm.ImagePath)" alt="IMAGES" />
-                <h4>@Html.DisplayFor(vms => vm.Name)</h4>          
+            <div class="caption">
+                <img style="max-height: 200px" src="@Url.Content(vm.ImagePath)" alt="IMAGES"/>
+                <h4>@Html.DisplayFor(vms => vm.Name)</h4>
                 <p>@Html.DisplayFor(vms => vm.Description)</p>
             </div>
-            
+
             @if (vm.Amount > 0)
             {
                 using (Html.BeginForm("AddToCart", "Customer", FormMethod.Post))
@@ -24,9 +43,9 @@
             }
             else
             {
-                <input style="font-size: 14px" class="btn btn-danger" type="submit" disabled value="Out of stock" />
+                <input style="font-size: 14px" class="btn btn-danger" type="submit" disabled value="Out of stock"/>
             }
-            
+
         </div>
 
     </div>

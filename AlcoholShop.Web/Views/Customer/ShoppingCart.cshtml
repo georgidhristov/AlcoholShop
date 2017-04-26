@@ -4,6 +4,17 @@
     ViewBag.Title = "Profile Page";
 }
 
+<h2>Profile details</h2>
+<h4>@Html.DisplayFor(vm => Model.Name)</h4>
+<p>
+    @Html.DisplayFor(vm => Model.Email)<br />
+    @Html.DisplayFor(vm => Model.BirthDate)<br />
+    @Html.DisplayFor(vm => Model.Address)<br />
+    @Html.DisplayFor(vm => Model.Postcode)<br />
+    @Html.DisplayFor(vm => Model.PhoneNumber)<br />
+</p>
+@Html.ActionLink("Edit", "Edit")
+
 <h2>Shopping Cart</h2>
 
 <table class="table table-hover">
@@ -21,6 +32,13 @@
             <td>@Html.DisplayFor(vm => product.Name)</td>
             <td>@Html.DisplayFor(vm => product.Description)</td>
             <td>@Html.DisplayFor(vm => product.Price) BGN</td>
+            <td>
+                @using (Html.BeginForm("RemoveFromCart", "Customer", FormMethod.Post))
+                {
+                    <input type="number" value="@product.Id" name="productId" hidden="hidden"/>
+                    <input style="font-size: 14px" class="btn btn-danger" type="submit" value="Remove"/>
+                }
+            </td>
         </tr>
     }
     </tbody>

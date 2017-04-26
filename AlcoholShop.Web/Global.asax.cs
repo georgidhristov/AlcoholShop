@@ -26,8 +26,9 @@ namespace AlcoholShop.Web
             Mapper.Initialize(expression =>
             {
                 expression.CreateMap<Product, ProductViewModel>();
-                expression.CreateMap<ApplicationUser, ShoppingCartViewModel>();
+                expression.CreateMap<ApplicationUser, ShoppingCartViewModel>(); 
                 expression.CreateMap<Product, CustomerProductViewModel>();
+                expression.CreateMap<ApplicationUser, EditCustomerDetailsViewModel>();
             });
         }
     }
