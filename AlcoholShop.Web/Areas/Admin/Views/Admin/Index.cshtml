@@ -1,0 +1,36 @@
+﻿@model AlcoholShop.Models.ViewModels.Admin.AdminPageViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Admin Panel";
+}
+
+<h2>Admin Panel</h2>
+
+@Html.ActionLink("Add Product", "AddProduct", null, new { @class="btn btn-lg" })
+
+<h3>Products</h3>
+        
+@foreach (var product in Model.products)
+{
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail" style="background-color: whitesmoke; margin-bottom: 5px; align-items: center; text-align: center">
+            <div class="caption">
+                <img style="max-height: 200px" src="@Url.Content(product.ImagePath)" alt="IMAGES" />
+                <h4>@Html.DisplayFor(vms => product.Name)</h4>
+                <p>@Html.DisplayFor(vms => product.Description)</p>
+            </div>
+
+            @if (product.Amount > 0)
+            {
+                <input type="number" value="@product.Id" name="productId" hidden="hidden" />
+                <input style="font-size: 14px" class="btn btn-success" type="submit" value="@Html.DisplayFor(vms => product.Price) BGN" />
+            }
+            else
+            {
+                <input style="font-size: 14px" class="btn btn-danger" type="submit" disabled value="Out of stock" />
+            }
+            @Html.ActionLink("Edit", "EditProduct", new { id = product.Id }, new { @class = "btn btn-md btn-warning" })
+
+        </div>
+    </div>
+}

@@ -29,6 +29,7 @@ namespace AlcoholShop.Web
                 expression.CreateMap<ApplicationUser, ShoppingCartViewModel>(); 
                 expression.CreateMap<Product, CustomerProductViewModel>();
                 expression.CreateMap<ApplicationUser, EditCustomerDetailsViewModel>();
+                //expression.CreateMap<Product, ProductViewModel>();
             });
         }
     }

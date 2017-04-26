@@ -22,6 +22,7 @@ namespace AlcoholShop.Web.Controllers
             return View(vms);
         }
 
+        [AllowAnonymous]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -29,6 +30,7 @@ namespace AlcoholShop.Web.Controllers
             return View();
         }
 
+        [AllowAnonymous]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
