@@ -5,6 +5,6 @@ namespace AlcoholShop.Models.ViewModels.Admin
 {
     public class AdminPageViewModel
     {
-        public IEnumerable<ProductViewModel> products { get; set; }
+        public IEnumerable<ProductViewModel> Products { get; set; }
     }
 }

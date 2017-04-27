@@ -10,10 +10,10 @@
 
 <h3>Products</h3>
         
-@foreach (var product in Model.products)
+@foreach (var product in Model.Products)
 {
     <div class="col-sm-6 col-md-4">
-        <div class="thumbnail" style="background-color: whitesmoke; margin-bottom: 5px; align-items: center; text-align: center">
+        <div class="thumbnail" style="background-color: #f8f8f8; margin-bottom: 5px; align-items: center; text-align: center">
             <div class="caption">
                 <img style="max-height: 200px" src="@Url.Content(product.ImagePath)" alt="IMAGES" />
                 <h4>@Html.DisplayFor(vms => product.Name)</h4>
@@ -22,15 +22,15 @@
 
             @if (product.Amount > 0)
             {
-                <input type="number" value="@product.Id" name="productId" hidden="hidden" />
-                <input style="font-size: 14px" class="btn btn-success" type="submit" value="@Html.DisplayFor(vms => product.Price) BGN" />
+                <input style="font-size: 14px" class="btn btn-success" type="submit" disabled value="@Html.DisplayFor(vms => product.Price) BGN" />
             }
             else
             {
                 <input style="font-size: 14px" class="btn btn-danger" type="submit" disabled value="Out of stock" />
             }
-            @Html.ActionLink("Edit", "EditProduct", new { id = product.Id }, new { @class = "btn btn-md btn-warning" })
 
+            @Html.ActionLink("Edit", "EditProduct", new { name = product.Name }, new { @class = "btn btn-md btn-warning" })
+            @Html.ActionLink("Delete", "DeleteProduct", new { name = product.Name }, new { @class = "btn btn-md btn-danger" })
         </div>
     </div>
 }

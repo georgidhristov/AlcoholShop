@@ -1,5 +1,10 @@
-﻿using System.Web.Mvc;
+﻿using System.Threading.Tasks;
+using System.Web.Mvc;
+using AlcoholShop.Models.BindingModels.Admin;
+using AlcoholShop.Models.EntityModels;
+using AlcoholShop.Models.ViewModels.Account;
 using AlcoholShop.Models.ViewModels.Admin;
+using AlcoholShop.Models.ViewModels.Product;
 using AlcoholShop.Services;
 
 namespace AlcoholShop.Web.Areas.Admin.Controllers
@@ -30,11 +35,48 @@ namespace AlcoholShop.Web.Areas.Admin.Controllers
             return this.View();
         }
 
-        [HttpGet]
-        [Route("product/{id}/edit")] //***s
-        public ActionResult EditProduct()
+        [HttpPost]
+        [Route("product/add")]
+        public ActionResult AddProduct(AddProductBindingModel bind)
         {
-            return this.View(); 
+            if (this.ModelState.IsValid)
+            {
+                this.service.AddProduct(bind);
+                return this.RedirectToAction("Index");
+            }
+
+            return this.View();
+        }
+
+        [HttpGet]
+        [Route("product/{name}/delete")]
+        public ActionResult DeleteProduct(string name)
+        {
+            this.service.DeleteProduct(name);
+            return this.RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        [Route("product/{name}/edit")]
+        public ActionResult EditProduct(string name)
+        {
+            EditProductViewModel vm = this.service.GetEditProductViewModel(name);
+            return this.View(vm);
+        }
+
+        [HttpPost]
+        [Route("product/{name}/edit")]
+        public ActionResult EditProduct(EditProductBindingModel bind, string name)
+        {
+            if (this.ModelState.IsValid)
+            {
+                this.service.EditProduct(bind, name);
+                return this.RedirectToAction("Index");
+            }
+
+            EditProductViewModel vm = this.service.GetEditProductViewModel(name);
+
+            return this.View(vm);
         }
     }
 }

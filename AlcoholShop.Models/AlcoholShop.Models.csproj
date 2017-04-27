@@ -94,6 +94,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BindingModels\Admin\AddProductBindingModel.cs" />
+    <Compile Include="BindingModels\Admin\EditProductBindingModel.cs" />
     <Compile Include="BindingModels\Customer\EditCustomerDetailsBindingModel.cs" />
     <Compile Include="EntityModels\ApplicationUser.cs" />
     <Compile Include="EntityModels\Customer.cs" />
@@ -108,7 +110,9 @@
     <Compile Include="ViewModels\Account\ResetPasswordViewModel.cs" />
     <Compile Include="ViewModels\Account\SendCodeViewModel.cs" />
     <Compile Include="ViewModels\Account\VerifyCodeViewModel.cs" />
+    <Compile Include="ViewModels\Admin\AddProductViewModel.cs" />
     <Compile Include="ViewModels\Admin\AdminPageViewModel.cs" />
+    <Compile Include="ViewModels\Admin\EditProductViewModel.cs" />
     <Compile Include="ViewModels\Customer\CustomerProductViewModel.cs" />
     <Compile Include="ViewModels\Customer\EditCustomerDetailsViewModel.cs" />
     <Compile Include="ViewModels\Customer\ShoppingCartViewModel.cs" />

@@ -3,6 +3,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using AlcoholShop.Models.EntityModels;
+using AlcoholShop.Models.ViewModels.Admin;
 using AlcoholShop.Models.ViewModels.Customer;
 using AlcoholShop.Models.ViewModels.Product;
 using AutoMapper;
@@ -29,7 +30,7 @@ namespace AlcoholShop.Web
                 expression.CreateMap<ApplicationUser, ShoppingCartViewModel>(); 
                 expression.CreateMap<Product, CustomerProductViewModel>();
                 expression.CreateMap<ApplicationUser, EditCustomerDetailsViewModel>();
-                //expression.CreateMap<Product, ProductViewModel>();
+                expression.CreateMap<Product, EditProductViewModel>();
             });
         }
     }

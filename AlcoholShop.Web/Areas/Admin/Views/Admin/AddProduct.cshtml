@@ -1,0 +1,40 @@
+﻿@model AlcoholShop.Models.ViewModels.Admin.AddProductViewModel
+@{
+    ViewBag.Title = "Add Product";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add Product</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(vm => vm.Name)
+        @Html.TextBoxFor(vm => vm.Name, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(vm => vm.Description)
+        @Html.TextBoxFor(vm => vm.Description, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(vm => vm.Amount)
+        @Html.TextBoxFor(vm => vm.Amount, new { @type = "number", @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(vm => vm.Price)
+        @Html.TextBoxFor(vm => vm.Price, new { @type = "decimal", @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Select new image</label>
+        @Html.TextBoxFor(vm => vm.ImagePath, new { @type = "file"})
+        <br />
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Add" class="form-control" />
+    </div>
+}

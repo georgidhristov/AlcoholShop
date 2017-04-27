@@ -1,7 +1,7 @@
 ﻿@using System.Web.Mvc.Html
 @model IEnumerable<AlcoholShop.Models.ViewModels.Product.ProductViewModel>
 @{
-    ViewBag.Title = "Alcohol Shop";
+    ViewBag.Title = "Home";
 }
 
 <style>
@@ -27,7 +27,7 @@
 @foreach (var vm in Model)
 {
     <div class="col-sm-6 col-md-4">
-        <div class="thumbnail" style="background-color: whitesmoke; margin-bottom: 5px; align-items: center; text-align: center">
+        <div class="thumbnail" style="background-color: #f8f8f8; margin-bottom: 5px; align-items: center; text-align: center">
             <div class="caption">
                 <img style="max-height: 200px" src="@Url.Content(vm.ImagePath)" alt="IMAGES"/>
                 <h4>@Html.DisplayFor(vms => vm.Name)</h4>
