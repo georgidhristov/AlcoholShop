@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Microsoft.AspNet.Identity;
 
 namespace AlcoholShop.Models.BindingModels.Admin
 {

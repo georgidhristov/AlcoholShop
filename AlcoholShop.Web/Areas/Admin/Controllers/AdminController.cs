@@ -1,10 +1,6 @@
-﻿using System.Threading.Tasks;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using AlcoholShop.Models.BindingModels.Admin;
-using AlcoholShop.Models.EntityModels;
-using AlcoholShop.Models.ViewModels.Account;
 using AlcoholShop.Models.ViewModels.Admin;
-using AlcoholShop.Models.ViewModels.Product;
 using AlcoholShop.Services;
 
 namespace AlcoholShop.Web.Areas.Admin.Controllers

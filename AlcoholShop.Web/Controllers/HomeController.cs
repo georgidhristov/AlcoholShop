@@ -22,13 +22,6 @@ namespace AlcoholShop.Web.Controllers
             return View(vms);
         }
 
-        [AllowAnonymous]
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
 
         [AllowAnonymous]
         public ActionResult Contact()
