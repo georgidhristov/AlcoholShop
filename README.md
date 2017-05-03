@@ -1,2 +1,2 @@
 # AlcoholShop
-Software-Technologies-Project
+Software-university-Project
