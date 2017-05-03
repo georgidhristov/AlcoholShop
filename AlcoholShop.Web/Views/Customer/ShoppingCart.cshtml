@@ -1,5 +1,5 @@
 ﻿@model AlcoholShop.Models.ViewModels.Customer.ShoppingCartViewModel
-    
+
 @{
     ViewBag.Title = "Profile Page";
 }
@@ -7,11 +7,11 @@
 <h2>Profile details</h2>
 <h4>@Html.DisplayFor(vm => Model.Name)</h4>
 <p>
-    @Html.DisplayFor(vm => Model.Email)<br />
-    @Html.DisplayFor(vm => Model.BirthDate)<br />
-    @Html.DisplayFor(vm => Model.Address)<br />
-    @Html.DisplayFor(vm => Model.Postcode)<br />
-    @Html.DisplayFor(vm => Model.PhoneNumber)<br />
+    @Html.DisplayFor(vm => Model.Email)<br/>
+    @Html.DisplayFor(vm => Model.BirthDate)<br/>
+    @Html.DisplayFor(vm => Model.Address)<br/>
+    @Html.DisplayFor(vm => Model.Postcode)<br/>
+    @Html.DisplayFor(vm => Model.PhoneNumber)<br/>
 </p>
 @Html.ActionLink("Edit", "Edit")
 
@@ -44,8 +44,30 @@
                 }
             </td>
         </tr>
-    } 
+    }
     </tbody>
 </table>
 
-@Html.ActionLink("Home", "Index", "Home")
+@Html.ActionLink("Home", "Index", "Home", null, new {@class = "btn btn-default"})
+
+@*TODO*@
+<input style="font-size: 14px" class="btn btn-success" type="submit" value="Buy" data-toggle="modal" data-target="#purchesSuccessModel"/>
+
+<!-- Modal -->
+<div class="modal fade" id="purchesSuccessModel" role="dialog">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Purches Success</h4>
+            </div>
+            <div class="modal-body">
+                <p>Will call you to confirm purchase.</p>
+                <p style="font-size: 12px">Delivery within five working days.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
