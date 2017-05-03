@@ -20,6 +20,6 @@ namespace AlcoholShop.Models.ViewModels.Customer
 
         public string Postcode { get; set; }
 
-        public IEnumerable<CustomerProductViewModel> ProductsInCart { get; set; } 
+        public IEnumerable<PurchasesViewModel> ProductsInCart { get; set; } 
     }
 }

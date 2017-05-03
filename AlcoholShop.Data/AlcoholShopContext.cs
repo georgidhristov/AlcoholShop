@@ -15,6 +15,8 @@ namespace AlcoholShop.Data
 
         public DbSet<Product> Products { get; set; }
 
+        public DbSet<Purchase> Purchases { get; set; }
+
         public static AlcoholShopContext Create()
         {
             return new AlcoholShopContext();

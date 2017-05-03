@@ -55,7 +55,7 @@ namespace AlcoholShop.Data.Migrations
                 {
                     Name = "Paddy",
                     Description = "Middle class whisky, 700ml",
-                    Amount = 44,
+                    Amount = 1,
                     Price = 27.00M,
                     ImagePath = "~/Resources/paddy.png",
                 },
@@ -71,7 +71,7 @@ namespace AlcoholShop.Data.Migrations
                 {
                     Name = "Vat69",
                     Description = "Low class whisky, 700ml",
-                    Amount = 36,
+                    Amount = 40,
                     Price = 11.99M,
                     ImagePath = "~/Resources/vat69.png",
                 },
@@ -79,7 +79,7 @@ namespace AlcoholShop.Data.Migrations
                 {
                     Name = "Blue Label",
                     Description = "Top shelf whisky, 700ml",
-                    Amount = 36,
+                    Amount = 10,
                     Price = 109.00M,
                     ImagePath = "~/Resources/blue-label.png",
                 }

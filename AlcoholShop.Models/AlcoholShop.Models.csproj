@@ -100,6 +100,7 @@
     <Compile Include="EntityModels\ApplicationUser.cs" />
     <Compile Include="EntityModels\Customer.cs" />
     <Compile Include="EntityModels\Product.cs" />
+    <Compile Include="EntityModels\Purchase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\Account\ExternalLoginConfirmationViewModel.cs" />
     <Compile Include="ViewModels\Account\ExternalLoginListViewModel.cs" />
@@ -113,7 +114,7 @@
     <Compile Include="ViewModels\Admin\AddProductViewModel.cs" />
     <Compile Include="ViewModels\Admin\AdminPageViewModel.cs" />
     <Compile Include="ViewModels\Admin\EditProductViewModel.cs" />
-    <Compile Include="ViewModels\Customer\CustomerProductViewModel.cs" />
+    <Compile Include="ViewModels\Customer\PurchasesViewModel.cs" />
     <Compile Include="ViewModels\Customer\EditCustomerDetailsViewModel.cs" />
     <Compile Include="ViewModels\Customer\ShoppingCartViewModel.cs" />
     <Compile Include="ViewModels\Manage\AddPhoneNumberViewModel.cs" />

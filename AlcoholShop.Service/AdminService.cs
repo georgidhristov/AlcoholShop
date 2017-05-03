@@ -40,8 +40,8 @@ namespace AlcoholShop.Services
         {
             Product product =
                 this.Context.Products.FirstOrDefault(p => p.Name == productName);
-
             this.Context.Products.Remove(product);
+
             this.Context.SaveChanges();
         }
 

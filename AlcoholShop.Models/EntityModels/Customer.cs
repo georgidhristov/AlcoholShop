@@ -1,18 +1,16 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace AlcoholShop.Models.EntityModels
 {
     public class Customer
     {
-        public Customer()
-        {
-              this.Products = new HashSet<Product>();
-        }
-
+        [Key]
         public int Id { get; set; }
 
         public virtual ApplicationUser User { get; set; }
 
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<Purchase> CustomerPurchases { get; set; }
+        
     }
 }

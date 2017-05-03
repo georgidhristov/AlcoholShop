@@ -22,7 +22,9 @@
     <tr>
         <th>Name</th>
         <th>Description</th>
-        <th>Price</th>
+        <th>Unit price</th>
+        <th>Quantity</th>
+        <th>Total price</th>
     </tr>
     </thead>
     <tbody>
@@ -31,7 +33,9 @@
         <tr>
             <td>@Html.DisplayFor(vm => product.Name)</td>
             <td>@Html.DisplayFor(vm => product.Description)</td>
-            <td>@Html.DisplayFor(vm => product.Price) BGN</td>
+            <td>@Html.DisplayFor(vm => product.UnitPrice) BGN</td>
+            <td>@Html.DisplayFor(vm => product.Quantity)</td>
+            <td>@Html.DisplayFor(vm => product.TotalPrice) BGN</td>
             <td>
                 @using (Html.BeginForm("RemoveFromCart", "Customer", FormMethod.Post))
                 {
@@ -40,7 +44,7 @@
                 }
             </td>
         </tr>
-    }
+    } 
     </tbody>
 </table>
 
