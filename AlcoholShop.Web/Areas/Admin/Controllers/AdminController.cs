@@ -2,6 +2,7 @@
 using AlcoholShop.Models.BindingModels.Admin;
 using AlcoholShop.Models.ViewModels.Admin;
 using AlcoholShop.Services;
+using AlcoholShop.Services.Interfaces;
 
 namespace AlcoholShop.Web.Areas.Admin.Controllers
 {
@@ -9,11 +10,11 @@ namespace AlcoholShop.Web.Areas.Admin.Controllers
     [RouteArea("admin")]
     public class AdminController : Controller
     {
-        private AdminService service;
+        private IAdminService service;
 
-        public AdminController()
+        public AdminController(IAdminService service)
         {
-            this.service = new AdminService();
+            this.service = service;
         }
 
         [HttpGet]

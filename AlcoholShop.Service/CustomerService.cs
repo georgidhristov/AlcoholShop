@@ -4,11 +4,12 @@ using System.Linq;
 using AlcoholShop.Models.BindingModels.Customer;
 using AlcoholShop.Models.EntityModels;
 using AlcoholShop.Models.ViewModels.Customer;
+using AlcoholShop.Services.Interfaces;
 using AutoMapper;
 
 namespace AlcoholShop.Services
 {
-    public class CustomerService : Service
+    public class CustomerService : Service, ICustomerService
     {
         public Customer GetCurrentCustomer(string userName)
         {
@@ -85,16 +86,16 @@ namespace AlcoholShop.Services
             return vm;
         }
 
-        public EditCustomerDetailsViewModel GetEditCustomerDetailsViewModel(string userName)
+        public EditCustomerProfileViewModel GetEditCustomerProfileViewModel(string userName)
         {
             var user =
                 Context.Users.FirstOrDefault(applicationUser => applicationUser.UserName == userName);
-            var vm = Mapper.Map<ApplicationUser, EditCustomerDetailsViewModel>(user);
+            var vm = Mapper.Map<ApplicationUser, EditCustomerProfileViewModel>(user);
 
             return vm;
         }
 
-        public void EditCustomerDetails(EditCustomerDetailsBindingModel bind, string currentUserName)
+        public void EditCustomerProfile(EditCustomerProfileBindingModel bind, string currentUserName)
         {
             var user =
                 Context.Users.FirstOrDefault(applicationUser => applicationUser.UserName == currentUserName);

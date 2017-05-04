@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
 using AlcoholShop.Models.EntityModels;
 using AlcoholShop.Models.ViewModels.Product;
+using AlcoholShop.Services.Interfaces;
 using AutoMapper;
 
 namespace AlcoholShop.Services
 {
-    public class HomeService : Service
+    public class HomeService : Service, IHomeService
     {
         public IEnumerable<ProductViewModel> GetAllProducts()
         {

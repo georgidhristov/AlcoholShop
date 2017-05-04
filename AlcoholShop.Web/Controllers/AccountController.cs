@@ -5,6 +5,7 @@ using System.Web.Mvc;
 using AlcoholShop.Models.EntityModels;
 using AlcoholShop.Models.ViewModels.Account;
 using AlcoholShop.Services;
+using AlcoholShop.Services.Interfaces;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
@@ -16,11 +17,11 @@ namespace AlcoholShop.Web.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
-        private AccountService service;
+        private IAccountService service;
 
-        public AccountController()
+        public AccountController(IAccountService service)
         {
-            this.service = new AccountService();
+            this.service = service;
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )

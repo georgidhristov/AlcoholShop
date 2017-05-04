@@ -2,7 +2,7 @@
 
 namespace AlcoholShop.Models.BindingModels.Customer
 {
-    public class EditCustomerDetailsBindingModel
+    public class EditCustomerProfileBindingModel
     {
         [Required]
         public string Name { get; set; }

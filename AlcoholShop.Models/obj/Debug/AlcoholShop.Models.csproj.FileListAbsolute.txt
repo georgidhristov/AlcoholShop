@@ -27,4 +27,3 @@ C:\Users\g.hristov\Desktop\AlcoholShop\AlcoholShop.Models\bin\Debug\System.Web.W
 C:\Users\g.hristov\Desktop\AlcoholShop\AlcoholShop.Models\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Users\g.hristov\Desktop\AlcoholShop\AlcoholShop.Models\obj\Debug\AlcoholShop.Models.dll
 C:\Users\g.hristov\Desktop\AlcoholShop\AlcoholShop.Models\obj\Debug\AlcoholShop.Models.pdb
-C:\Users\g.hristov\Desktop\AlcoholShop\AlcoholShop.Models\obj\Debug\AlcoholShop.Models.csprojResolveAssemblyReference.cache

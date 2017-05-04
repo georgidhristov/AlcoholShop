@@ -2,7 +2,7 @@
 
 namespace AlcoholShop.Models.ViewModels.Customer
 {
-    public class EditCustomerDetailsViewModel
+    public class EditCustomerProfileViewModel
     {
         [Required]
         public string Name { get; set; }

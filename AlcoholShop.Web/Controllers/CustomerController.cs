@@ -3,6 +3,7 @@ using AlcoholShop.Models.BindingModels.Customer;
 using AlcoholShop.Models.EntityModels;
 using AlcoholShop.Models.ViewModels.Customer;
 using AlcoholShop.Services;
+using AlcoholShop.Services.Interfaces;
 
 namespace AlcoholShop.Web.Controllers
 {
@@ -10,11 +11,11 @@ namespace AlcoholShop.Web.Controllers
     [RoutePrefix("customer")]
     public class CustomerController : Controller
     {
-        private CustomerService service;
+        private ICustomerService service;
 
-        public CustomerController()
+        public CustomerController(ICustomerService service)
         {
-            this.service = new CustomerService();
+            this.service = service;
         }
 
         [HttpPost]
@@ -37,6 +38,7 @@ namespace AlcoholShop.Web.Controllers
             return RedirectToAction("ShoppingCart");
         }
 
+        [HttpGet]
         [Route("shoppingcart")]
         public ActionResult ShoppingCart()
         {
@@ -46,29 +48,30 @@ namespace AlcoholShop.Web.Controllers
             return this.View(vm);
         }
 
+
         [HttpGet]
-        [Route("Edit")]
-        public ActionResult Edit()
+        [Route("editprofile")]
+        public ActionResult EditProfile()
         {
             string userName = this.User.Identity.Name;
-            EditCustomerDetailsViewModel vm = this.service.GetEditCustomerDetailsViewModel(userName);
+            EditCustomerProfileViewModel vm = this.service.GetEditCustomerProfileViewModel(userName);
 
             return this.View(vm);
         }
 
         [HttpPost]
-        [Route("Edit")]
-        public ActionResult Edit(EditCustomerDetailsBindingModel bind)
+        [Route("editprofile")]
+        public ActionResult EditProfile(EditCustomerProfileBindingModel bind)
         {
             if (this.ModelState.IsValid)
             {
                 string currentUserName = this.User.Identity.Name;
-                this.service.EditCustomerDetails(bind, currentUserName);
+                this.service.EditCustomerProfile(bind, currentUserName);
                 return this.RedirectToAction("ShoppingCart");
             }
 
             string userName = this.User.Identity.Name;
-            EditCustomerDetailsViewModel vm = this.service.GetEditCustomerDetailsViewModel(userName);
+            EditCustomerProfileViewModel vm = this.service.GetEditCustomerProfileViewModel(userName);
 
             return this.View(vm);
         }

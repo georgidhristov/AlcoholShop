@@ -1,8 +1,9 @@
 ﻿using AlcoholShop.Models.EntityModels;
+using AlcoholShop.Services.Interfaces;
 
 namespace AlcoholShop.Services
 {
-    public class AccountService : Service
+    public class AccountService : Service, IAccountService
     {
         public void CreateCustomer(ApplicationUser user)
         {

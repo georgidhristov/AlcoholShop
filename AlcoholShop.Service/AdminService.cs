@@ -4,11 +4,12 @@ using AlcoholShop.Models.BindingModels.Admin;
 using AlcoholShop.Models.EntityModels;
 using AlcoholShop.Models.ViewModels.Admin;
 using AlcoholShop.Models.ViewModels.Product;
+using AlcoholShop.Services.Interfaces;
 using AutoMapper;
 
 namespace AlcoholShop.Services
 {
-    public class AdminService : Service
+    public class AdminService : Service, IAdminService
     {
         public AdminPageViewModel GetAdminPage()
         {

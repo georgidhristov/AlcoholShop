@@ -6,7 +6,7 @@ namespace AlcoholShop.Models.ViewModels.Customer
 {
     public class ShoppingCartViewModel
     {
-        [Display(Name = "Name:")]
+
         public string Name { get; set; }
 
         public string Email { get; set; }

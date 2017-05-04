@@ -2,17 +2,18 @@
 using System.Web.Mvc;
 using AlcoholShop.Models.ViewModels.Product;
 using AlcoholShop.Services;
+using AlcoholShop.Services.Interfaces;
 
 namespace AlcoholShop.Web.Controllers
 {
     [Authorize(Roles = "Customer")]
     public class HomeController : Controller
     {
-        private HomeService service;
+        private IHomeService service;
 
-        public HomeController()
+        public HomeController(IHomeService service)
         {
-            service = new HomeService();
+            this.service = service;
         }
 
         [AllowAnonymous]
@@ -25,9 +26,7 @@ namespace AlcoholShop.Web.Controllers
 
         [AllowAnonymous]
         public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
+        { 
             return View();
         }
     }

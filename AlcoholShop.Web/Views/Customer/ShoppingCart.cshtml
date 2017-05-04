@@ -1,19 +1,19 @@
 ﻿@model AlcoholShop.Models.ViewModels.Customer.ShoppingCartViewModel
 
 @{
-    ViewBag.Title = "Profile Page";
+    ViewBag.Title = "Shopping Cart";
 }
 
 <h2>Profile details</h2>
-<h4>@Html.DisplayFor(vm => Model.Name)</h4>
-<p>
-    @Html.DisplayFor(vm => Model.Email)<br/>
-    @Html.DisplayFor(vm => Model.BirthDate)<br/>
-    @Html.DisplayFor(vm => Model.Address)<br/>
-    @Html.DisplayFor(vm => Model.Postcode)<br/>
-    @Html.DisplayFor(vm => Model.PhoneNumber)<br/>
-</p>
-@Html.ActionLink("Edit", "Edit")
+<h4>@Html.DisplayFor(vm => vm.Name)</h4>
+<p>@Html.DisplayFor(vm => vm.Email)</p>
+<p>@Html.DisplayFor(vm => vm.Address)</p>
+<p>@Html.DisplayFor(vm => vm.Postcode)</p>
+<p>@Html.DisplayFor(vm => vm.BirthDate)</p>
+<p>@Html.DisplayFor(vm => vm.PhoneNumber)</p>
+
+
+@Html.ActionLink("Edit", "ShoppingCart")
 
 <h2>Shopping Cart</h2>
 

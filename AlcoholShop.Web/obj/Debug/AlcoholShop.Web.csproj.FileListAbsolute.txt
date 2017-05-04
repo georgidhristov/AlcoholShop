@@ -94,3 +94,10 @@ C:\Users\g.hristov\Desktop\AlcoholShop\AlcoholShop.Web\bin\Microsoft.Owin.Securi
 C:\Users\g.hristov\Desktop\AlcoholShop\AlcoholShop.Web\obj\Debug\AlcoholShop.Web.csprojResolveAssemblyReference.cache
 C:\Users\g.hristov\Desktop\AlcoholShop\AlcoholShop.Web\obj\Debug\AlcoholShop.Web.dll
 C:\Users\g.hristov\Desktop\AlcoholShop\AlcoholShop.Web\obj\Debug\AlcoholShop.Web.pdb
+C:\Users\g.hristov\Desktop\AlcoholShop\AlcoholShop.Web\bin\Ninject.dll
+C:\Users\g.hristov\Desktop\AlcoholShop\AlcoholShop.Web\bin\Ninject.Web.Common.dll
+C:\Users\g.hristov\Desktop\AlcoholShop\AlcoholShop.Web\bin\Ninject.Web.Mvc.dll
+C:\Users\g.hristov\Desktop\AlcoholShop\AlcoholShop.Web\bin\WebActivatorEx.dll
+C:\Users\g.hristov\Desktop\AlcoholShop\AlcoholShop.Web\bin\Ninject.xml
+C:\Users\g.hristov\Desktop\AlcoholShop\AlcoholShop.Web\bin\Ninject.Web.Common.xml
+C:\Users\g.hristov\Desktop\AlcoholShop\AlcoholShop.Web\bin\Ninject.Web.Mvc.xml

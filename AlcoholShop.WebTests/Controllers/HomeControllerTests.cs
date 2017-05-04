@@ -1,14 +1,14 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Web.Mvc;
+using AlcoholShop.Services;
+using AlcoholShop.Web.Controllers;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace AlcoholShop.Web.Controllers.Tests
+namespace AlcoholShop.WebTests.Controllers
 {
     [TestClass()]
     public class HomeControllerTests
     {
-        [TestMethod()]
-        public void IndexTest()
-        {
-            Assert.Fail();
-        }
+
+
     }
 }
